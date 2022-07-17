@@ -1,5 +1,4 @@
 import * as React from "react"
-import shortid from "shortid"
 import { RouteProp } from "@react-navigation/native"
 import { View, StyleSheet, TouchableOpacity } from "react-native"
 import { FlatList, LongPressGestureHandler } from "react-native-gesture-handler"
@@ -122,7 +121,7 @@ export const HighlightScreen: React.FC<HighlightScreenProps> = ({ route }) => {
           scrollEnabled={false}
           horizontal={true}
           data={data}
-          keyExtractor={() => shortid.generate()}
+          keyExtractor={(_,index) => `image_${index}`}
           renderItem={({ item }) => {
             return (
               <FastImage
