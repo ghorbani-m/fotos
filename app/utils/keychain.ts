@@ -1,8 +1,17 @@
 import * as ReactNativeKeychain from 'react-native-keychain'
 export { UserCredentials, Result } from 'react-native-keychain'
 export enum Service {
+  /**
+   * Store DID passowrd and wallet signiture
+   */
   DIDCredentials = 'DIDCredentials',
+  /**
+   * FULA client rootCid
+   */
   FULARootObject = 'FULARootObject',
+  /**
+   * FULA client peerId
+   */
   FULAPeerIdObject = 'FULAPeerIdObject',
 }
 /**
